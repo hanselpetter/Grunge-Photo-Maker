@@ -1,3 +1,3 @@
 # Grunge-Photo-Maker
 
-Continuing to create plenty of Grunge photo!
+Continuing to create plenty of Grunge photo..
