@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 # load image
-img1 = cv2.imread("image.png")
-img2 = cv2.imread("IMG_1367.jpeg")
+img1 = cv2.imread("image.jpeg")
+img2 = cv2.imread("texture.jpg")
 
 # convert to grayscale
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)

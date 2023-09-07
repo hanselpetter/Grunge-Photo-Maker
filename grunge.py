@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Load the image
-image = cv2.imread('image1.jpeg')
+image = cv2.imread('image.jpeg')
 
 # conversion code
 # image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
@@ -12,9 +12,9 @@ image = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
   
 # Adjust the hue, saturation, and value of the image
 # Adjusts the hue by multiplying it by 0.7
-image[:, :, 0] = image[:, :, 0] * 1
+image[:, :, 0] = image[:, :, 0] * 0.2
 # Adjusts the saturation by multiplying it by 1.5
-image[:, :, 1] = image[:, :, 1] * 0.5
+image[:, :, 1] = image[:, :, 1] * 0.1
 # Adjusts the value by multiplying it by 0.5
 image[:, :, 2] = image[:, :, 2] * 1
   
@@ -22,8 +22,8 @@ image[:, :, 2] = image[:, :, 2] * 1
 image = cv2.cvtColor(image, cv2.COLOR_HSV2BGR)
 
 # define the alpha and beta
-alpha = 0.5 # Contrast control
-beta = -8 # Brightness control
+alpha = 0.8 # Contrast control
+beta = 5 # Brightness control
 
 # call convertScaleAbs function
 image = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
@@ -31,7 +31,7 @@ image = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
 
 # Generate random Gaussian noise
 mean = 0
-stddev = 20
+stddev = 30
 noise = np.zeros(image.shape, np.uint8)
 cv2.randn(noise, mean, stddev)
 
